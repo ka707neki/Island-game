@@ -16,12 +16,12 @@ A small text-based adventure game written in **C++**. Choose a door, then choose
 | Red door → Black box | 🕸 Spiders, game over |
 | Red door → Green box | 💰 Treasure, you win! |
 
-Input is case-insensitive (`red`, `Red` and `RED` all work). Invalid input just asks again.
+Input is case-insensitive (`red`, `Red` and `RED` all work) and extra spaces are ignored. Invalid input just asks again. After each round you can choose to play again.
 
 ## 🛠️ Requirements
 
 - A C++11 (or newer) compiler, such as `g++` or `clang++`
-- A terminal that supports UTF-8 so the emojis display correctly
+- A terminal that supports UTF-8 and ANSI colors (most Linux/macOS terminals and Windows 10+)
 
 ## 🚀 Build and Run
 
@@ -55,16 +55,17 @@ Congratulations! You found the treasure! 💰💰💰
 
 ## 📚 What This Project Demonstrates
 
-- Console input and output with `cin` / `cout`
+- Console input and output with `cin` / `cout` / `getline`
 - Nested `while` loops and `if / else if` branching
-- String handling and case-insensitive comparison using `std::transform` and a lambda
-- Basic input validation
+- Splitting code into small, reusable functions
+- String handling: trimming and case-insensitive comparison with `std::transform` and a lambda
+- Input validation and clean exit on end-of-input
+- ANSI colors and a typewriter effect for a nicer terminal UI
 
 ## 💡 Ideas for Improvement
 
-- Add a "Play again?" option
 - Add more doors, rooms and endings
-- Handle end-of-input (`Ctrl+D`) gracefully
+- Add an inventory or score system
 - Store box outcomes in a `map` instead of an `if / else` chain
 
 ## 📄 License
